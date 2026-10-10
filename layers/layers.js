@@ -1,5 +1,5 @@
 ol.proj.proj4.register(proj4);
-//ol.proj.get("EPSG:3857").setExtent([98846.166556, 5721100.062042, 2067960.914245, 6634121.718475]);
+//ol.proj.get("EPSG:3857").setExtent([644919.909982, 5868945.905462, 1587630.326649, 6525509.447129]);
 var wms_layers = [];
 
 
@@ -193,28 +193,43 @@ var lyr_ObermterHohenzollern1814_12 = new ol.layer.Vector({
                 interactive: true,
                 title: '<img src="styles/legend/ObermterHohenzollern1814_12.png" /> Oberämter Hohenzollern 1814'
             });
-var format_OberaemterWuerttemberg_13 = new ol.format.GeoJSON();
-var features_OberaemterWuerttemberg_13 = format_OberaemterWuerttemberg_13.readFeatures(json_OberaemterWuerttemberg_13, 
+var format_BezirksmterBaden_13 = new ol.format.GeoJSON();
+var features_BezirksmterBaden_13 = format_BezirksmterBaden_13.readFeatures(json_BezirksmterBaden_13, 
             {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857'});
-var jsonSource_OberaemterWuerttemberg_13 = new ol.source.Vector({
+var jsonSource_BezirksmterBaden_13 = new ol.source.Vector({
     attributions: ' ',
 });
-jsonSource_OberaemterWuerttemberg_13.addFeatures(features_OberaemterWuerttemberg_13);
-var lyr_OberaemterWuerttemberg_13 = new ol.layer.Vector({
+jsonSource_BezirksmterBaden_13.addFeatures(features_BezirksmterBaden_13);
+var lyr_BezirksmterBaden_13 = new ol.layer.Vector({
                 declutter: false,
-                source:jsonSource_OberaemterWuerttemberg_13, 
-                style: style_OberaemterWuerttemberg_13,
-                popuplayertitle: 'Oberaemter Wuerttemberg',
+                source:jsonSource_BezirksmterBaden_13, 
+                style: style_BezirksmterBaden_13,
+                popuplayertitle: 'Bezirksämter Baden',
                 interactive: true,
-                title: '<img src="styles/legend/OberaemterWuerttemberg_13.png" /> Oberaemter Wuerttemberg'
+                title: '<img src="styles/legend/BezirksmterBaden_13.png" /> Bezirksämter Baden'
+            });
+var format_ObermterWrttemberg_14 = new ol.format.GeoJSON();
+var features_ObermterWrttemberg_14 = format_ObermterWrttemberg_14.readFeatures(json_ObermterWrttemberg_14, 
+            {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857'});
+var jsonSource_ObermterWrttemberg_14 = new ol.source.Vector({
+    attributions: ' ',
+});
+jsonSource_ObermterWrttemberg_14.addFeatures(features_ObermterWrttemberg_14);
+var lyr_ObermterWrttemberg_14 = new ol.layer.Vector({
+                declutter: false,
+                source:jsonSource_ObermterWrttemberg_14, 
+                style: style_ObermterWrttemberg_14,
+                popuplayertitle: 'Oberämter Württemberg',
+                interactive: true,
+                title: '<img src="styles/legend/ObermterWrttemberg_14.png" /> Oberämter Württemberg'
             });
 var group_ObermterHohenzollern = new ol.layer.Group({
                                 layers: [lyr_ObermterHohenzollern1925_1,lyr_ObermterHohenzollern1862_2,lyr_ObermterHohenzollern1861_3,lyr_ObermterHohenzollern1854_4,lyr_ObermterHohenzollern1840_5,lyr_ObermterHohenzollern1838_6,lyr_ObermterHohenzollern1830_7,lyr_ObermterHohenzollern1828_8,lyr_ObermterHohenzollern1827_9,lyr_ObermterHohenzollern1823_10,lyr_ObermterHohenzollern1822_11,lyr_ObermterHohenzollern1814_12,],
                                 fold: 'close',
                                 title: 'Oberämter Hohenzollern'});
 
-lyr_OpenStreetMap_0.setVisible(true);lyr_ObermterHohenzollern1925_1.setVisible(true);lyr_ObermterHohenzollern1862_2.setVisible(false);lyr_ObermterHohenzollern1861_3.setVisible(false);lyr_ObermterHohenzollern1854_4.setVisible(false);lyr_ObermterHohenzollern1840_5.setVisible(false);lyr_ObermterHohenzollern1838_6.setVisible(false);lyr_ObermterHohenzollern1830_7.setVisible(false);lyr_ObermterHohenzollern1828_8.setVisible(false);lyr_ObermterHohenzollern1827_9.setVisible(false);lyr_ObermterHohenzollern1823_10.setVisible(false);lyr_ObermterHohenzollern1822_11.setVisible(false);lyr_ObermterHohenzollern1814_12.setVisible(true);lyr_OberaemterWuerttemberg_13.setVisible(true);
-var layersList = [lyr_OpenStreetMap_0,group_ObermterHohenzollern,lyr_OberaemterWuerttemberg_13];
+lyr_OpenStreetMap_0.setVisible(true);lyr_ObermterHohenzollern1925_1.setVisible(true);lyr_ObermterHohenzollern1862_2.setVisible(false);lyr_ObermterHohenzollern1861_3.setVisible(false);lyr_ObermterHohenzollern1854_4.setVisible(false);lyr_ObermterHohenzollern1840_5.setVisible(false);lyr_ObermterHohenzollern1838_6.setVisible(false);lyr_ObermterHohenzollern1830_7.setVisible(false);lyr_ObermterHohenzollern1828_8.setVisible(false);lyr_ObermterHohenzollern1827_9.setVisible(false);lyr_ObermterHohenzollern1823_10.setVisible(false);lyr_ObermterHohenzollern1822_11.setVisible(false);lyr_ObermterHohenzollern1814_12.setVisible(true);lyr_BezirksmterBaden_13.setVisible(true);lyr_ObermterWrttemberg_14.setVisible(true);
+var layersList = [lyr_OpenStreetMap_0,group_ObermterHohenzollern,lyr_BezirksmterBaden_13,lyr_ObermterWrttemberg_14];
 lyr_ObermterHohenzollern1925_1.set('fieldAliases', {'fid': 'fid', 'Territor_1': 'Land', 'Oberamt': 'Amtsbezirk', 'Zeitraum_von': 'Zeitraum von', 'Zeitraum_bis': 'Zeitraum bis', 'Stichjahr': 'Stichjahr', 'Archivlink': 'Archivalien im Landesarchiv BW', 'Archivlink1': '-', 'Archivlink2': '-', 'Archivlink3': '-', 'Archivlink4': '-', 'Archivlink5': '-', });
 lyr_ObermterHohenzollern1862_2.set('fieldAliases', {'fid': 'fid', 'Territor_1': 'Land', 'Oberamt': 'Amtsbezirk', 'Zeitraum_von': 'Zeitraum von', 'Zeitraum_bis': 'Zeitraum bis', 'Stichjahr': 'Stichjahr', 'Archivlink': 'Archivalien im Landesarchiv BW', 'Archivlink1': '-', 'Archivlink2': '-', 'Archivlink3': '-', 'Archivlink4': '-', 'Archivlink5': '-', });
 lyr_ObermterHohenzollern1861_3.set('fieldAliases', {'fid': 'fid', 'Territor_1': 'Land', 'Oberamt': 'Amtsbezirk', 'Zeitraum_von': 'Zeitraum von', 'Zeitraum_bis': 'Zeitraum bis', 'Stichjahr': 'Stichjahr', 'Archivlink': 'Archivalien im Landesarchiv BW', 'Archivlink1': '-', 'Archivlink2': '-', 'Archivlink3': '-', 'Archivlink4': '-', 'Archivlink5': '-', });
@@ -227,7 +242,8 @@ lyr_ObermterHohenzollern1827_9.set('fieldAliases', {'fid': 'fid', 'Territor_1': 
 lyr_ObermterHohenzollern1823_10.set('fieldAliases', {'fid': 'fid', 'Territor_1': 'Land', 'Oberamt': 'Amtsbezirk', 'Zeitraum_von': 'Zeitraum von', 'Zeitraum_bis': 'Zeitraum bis', 'Stichjahr': 'Stichjahr', 'Archivlink': 'Archivalien im Landesarchiv BW', 'Archivlink1': '-', 'Archivlink2': '-', 'Archivlink3': '-', 'Archivlink4': '-', 'Archivlink5': '-', });
 lyr_ObermterHohenzollern1822_11.set('fieldAliases', {'fid': 'fid', 'Territor_1': 'Land', 'Oberamt': 'Amtsbezirk', 'Zeitraum_von': 'Zeitraum von', 'Zeitraum_bis': 'Zeitraum bis', 'Stichjahr': 'Stichjahr', 'Archivlink': 'Archivalien im Landesarchiv BW', 'Archivlink1': '-', 'Archivlink2': '-', 'Archivlink3': '-', 'Archivlink4': '-', 'Archivlink5': '-', });
 lyr_ObermterHohenzollern1814_12.set('fieldAliases', {'fid': 'fid', 'Territor_1': 'Land', 'Oberamt': 'Amtsbezirk', 'Zeitraum_von': 'Zeitraum von', 'Zeitraum_bis': 'Zeitraum bis', 'Stichjahr': 'Stichjahr', 'Archivlink': 'Archivalien im Landesarchiv BW', 'Archivlink1': '-', 'Archivlink2': '-', 'Archivlink3': '-', 'Archivlink4': '-', 'Archivlink5': '-', });
-lyr_OberaemterWuerttemberg_13.set('fieldAliases', {'fid': 'fid', 'Territor_1': 'Land', 'Oberamt': 'Amtsbezirk', 'Zeitraum_von': 'Zeitraum_von', 'Zeitraum_bis': 'Zeitraum_bis', 'Stichjahr': 'Stichjahr', 'Archivlink': 'Archivalien im Landesarchiv BW', 'Archivlink1': '-', 'Archivlink2': '-', 'Archivlink3': '-', 'Archivlink4': '-', 'Archivlink5': '-', });
+lyr_BezirksmterBaden_13.set('fieldAliases', {'fid': 'fid', 'Territor_1': 'Land', 'Oberamt': 'Amtsbezirk', 'Zeitraum_von': 'Zeitraum_von', 'Zeitraum_bis': 'Zeitraum_bis', 'Stichjahr': 'Stichjahr', 'Archivlink': 'Archivalien im Landesarchiv BW', 'Archivlink1': '-', 'Archivlink2': '-', 'Archivlink3': '-', 'Archivlink4': '-', 'Archivlink5': '-', });
+lyr_ObermterWrttemberg_14.set('fieldAliases', {'fid': 'fid', 'Territor_1': 'Land', 'Oberamt': 'Amtsbezirk', 'Zeitraum_von': 'Zeitraum_von', 'Zeitraum_bis': 'Zeitraum_bis', 'Stichjahr': 'Stichjahr', 'Archivlink': 'Archivalien im Landesarchiv BW', 'Archivlink1': '-', 'Archivlink2': '-', 'Archivlink3': '-', 'Archivlink4': '-', 'Archivlink5': '-', });
 lyr_ObermterHohenzollern1925_1.set('fieldImages', {'fid': 'Hidden', 'Territor_1': 'TextEdit', 'Oberamt': 'TextEdit', 'Zeitraum_von': 'TextEdit', 'Zeitraum_bis': 'TextEdit', 'Stichjahr': 'TextEdit', 'Archivlink': 'TextEdit', 'Archivlink1': 'TextEdit', 'Archivlink2': 'TextEdit', 'Archivlink3': 'TextEdit', 'Archivlink4': 'TextEdit', 'Archivlink5': 'TextEdit', });
 lyr_ObermterHohenzollern1862_2.set('fieldImages', {'fid': 'Hidden', 'Territor_1': 'TextEdit', 'Oberamt': 'TextEdit', 'Zeitraum_von': 'TextEdit', 'Zeitraum_bis': 'TextEdit', 'Stichjahr': 'TextEdit', 'Archivlink': 'TextEdit', 'Archivlink1': 'TextEdit', 'Archivlink2': 'TextEdit', 'Archivlink3': 'TextEdit', 'Archivlink4': 'TextEdit', 'Archivlink5': 'TextEdit', });
 lyr_ObermterHohenzollern1861_3.set('fieldImages', {'fid': 'Hidden', 'Territor_1': 'TextEdit', 'Oberamt': 'TextEdit', 'Zeitraum_von': 'TextEdit', 'Zeitraum_bis': 'TextEdit', 'Stichjahr': 'TextEdit', 'Archivlink': 'TextEdit', 'Archivlink1': 'TextEdit', 'Archivlink2': 'TextEdit', 'Archivlink3': 'TextEdit', 'Archivlink4': 'TextEdit', 'Archivlink5': 'TextEdit', });
@@ -240,7 +256,8 @@ lyr_ObermterHohenzollern1827_9.set('fieldImages', {'fid': 'Hidden', 'Territor_1'
 lyr_ObermterHohenzollern1823_10.set('fieldImages', {'fid': 'Hidden', 'Territor_1': 'TextEdit', 'Oberamt': 'TextEdit', 'Zeitraum_von': 'TextEdit', 'Zeitraum_bis': 'TextEdit', 'Stichjahr': 'TextEdit', 'Archivlink': 'TextEdit', 'Archivlink1': 'TextEdit', 'Archivlink2': 'TextEdit', 'Archivlink3': 'TextEdit', 'Archivlink4': 'TextEdit', 'Archivlink5': 'TextEdit', });
 lyr_ObermterHohenzollern1822_11.set('fieldImages', {'fid': 'Hidden', 'Territor_1': 'TextEdit', 'Oberamt': 'TextEdit', 'Zeitraum_von': 'TextEdit', 'Zeitraum_bis': 'TextEdit', 'Stichjahr': 'TextEdit', 'Archivlink': 'TextEdit', 'Archivlink1': 'TextEdit', 'Archivlink2': 'TextEdit', 'Archivlink3': 'TextEdit', 'Archivlink4': 'TextEdit', 'Archivlink5': 'TextEdit', });
 lyr_ObermterHohenzollern1814_12.set('fieldImages', {'fid': 'Hidden', 'Territor_1': 'TextEdit', 'Oberamt': 'TextEdit', 'Zeitraum_von': 'TextEdit', 'Zeitraum_bis': 'TextEdit', 'Stichjahr': 'TextEdit', 'Archivlink': 'TextEdit', 'Archivlink1': 'TextEdit', 'Archivlink2': 'TextEdit', 'Archivlink3': 'TextEdit', 'Archivlink4': 'TextEdit', 'Archivlink5': 'TextEdit', });
-lyr_OberaemterWuerttemberg_13.set('fieldImages', {'fid': 'Hidden', 'Territor_1': 'TextEdit', 'Oberamt': 'TextEdit', 'Zeitraum_von': 'Hidden', 'Zeitraum_bis': 'Hidden', 'Stichjahr': 'TextEdit', 'Archivlink': 'TextEdit', 'Archivlink1': 'TextEdit', 'Archivlink2': 'TextEdit', 'Archivlink3': 'TextEdit', 'Archivlink4': 'TextEdit', 'Archivlink5': 'TextEdit', });
+lyr_BezirksmterBaden_13.set('fieldImages', {'fid': 'Hidden', 'Territor_1': 'TextEdit', 'Oberamt': 'TextEdit', 'Zeitraum_von': 'Hidden', 'Zeitraum_bis': 'Hidden', 'Stichjahr': 'TextEdit', 'Archivlink': 'TextEdit', 'Archivlink1': 'TextEdit', 'Archivlink2': 'TextEdit', 'Archivlink3': 'TextEdit', 'Archivlink4': 'TextEdit', 'Archivlink5': 'TextEdit', });
+lyr_ObermterWrttemberg_14.set('fieldImages', {'fid': 'Hidden', 'Territor_1': 'TextEdit', 'Oberamt': 'TextEdit', 'Zeitraum_von': 'Hidden', 'Zeitraum_bis': 'Hidden', 'Stichjahr': 'TextEdit', 'Archivlink': 'TextEdit', 'Archivlink1': 'TextEdit', 'Archivlink2': 'TextEdit', 'Archivlink3': 'TextEdit', 'Archivlink4': 'TextEdit', 'Archivlink5': 'TextEdit', });
 lyr_ObermterHohenzollern1925_1.set('fieldLabels', {'Territor_1': 'inline label - visible with data', 'Oberamt': 'inline label - visible with data', 'Zeitraum_von': 'inline label - visible with data', 'Zeitraum_bis': 'inline label - visible with data', 'Stichjahr': 'no label', 'Archivlink': 'header label - visible with data', 'Archivlink1': 'header label - visible with data', 'Archivlink2': 'header label - visible with data', 'Archivlink3': 'header label - visible with data', 'Archivlink4': 'header label - visible with data', 'Archivlink5': 'header label - visible with data', });
 lyr_ObermterHohenzollern1862_2.set('fieldLabels', {'Territor_1': 'inline label - visible with data', 'Oberamt': 'inline label - visible with data', 'Zeitraum_von': 'inline label - visible with data', 'Zeitraum_bis': 'inline label - visible with data', 'Stichjahr': 'no label', 'Archivlink': 'header label - visible with data', 'Archivlink1': 'header label - visible with data', 'Archivlink2': 'header label - visible with data', 'Archivlink3': 'header label - visible with data', 'Archivlink4': 'header label - visible with data', 'Archivlink5': 'header label - visible with data', });
 lyr_ObermterHohenzollern1861_3.set('fieldLabels', {'Territor_1': 'inline label - visible with data', 'Oberamt': 'inline label - visible with data', 'Zeitraum_von': 'inline label - visible with data', 'Zeitraum_bis': 'inline label - visible with data', 'Stichjahr': 'no label', 'Archivlink': 'header label - visible with data', 'Archivlink1': 'header label - visible with data', 'Archivlink2': 'header label - visible with data', 'Archivlink3': 'header label - visible with data', 'Archivlink4': 'header label - visible with data', 'Archivlink5': 'header label - visible with data', });
@@ -253,7 +270,8 @@ lyr_ObermterHohenzollern1827_9.set('fieldLabels', {'Territor_1': 'inline label -
 lyr_ObermterHohenzollern1823_10.set('fieldLabels', {'Territor_1': 'inline label - visible with data', 'Oberamt': 'inline label - visible with data', 'Zeitraum_von': 'inline label - visible with data', 'Zeitraum_bis': 'inline label - visible with data', 'Stichjahr': 'no label', 'Archivlink': 'header label - visible with data', 'Archivlink1': 'header label - visible with data', 'Archivlink2': 'header label - visible with data', 'Archivlink3': 'header label - visible with data', 'Archivlink4': 'header label - visible with data', 'Archivlink5': 'header label - visible with data', });
 lyr_ObermterHohenzollern1822_11.set('fieldLabels', {'Territor_1': 'inline label - visible with data', 'Oberamt': 'inline label - visible with data', 'Zeitraum_von': 'inline label - visible with data', 'Zeitraum_bis': 'inline label - visible with data', 'Stichjahr': 'no label', 'Archivlink': 'header label - visible with data', 'Archivlink1': 'header label - visible with data', 'Archivlink2': 'header label - visible with data', 'Archivlink3': 'header label - visible with data', 'Archivlink4': 'header label - visible with data', 'Archivlink5': 'header label - visible with data', });
 lyr_ObermterHohenzollern1814_12.set('fieldLabels', {'Territor_1': 'inline label - always visible', 'Oberamt': 'inline label - visible with data', 'Zeitraum_von': 'inline label - visible with data', 'Zeitraum_bis': 'inline label - visible with data', 'Stichjahr': 'no label', 'Archivlink': 'header label - always visible', 'Archivlink1': 'header label - visible with data', 'Archivlink2': 'header label - visible with data', 'Archivlink3': 'header label - visible with data', 'Archivlink4': 'header label - visible with data', 'Archivlink5': 'header label - visible with data', });
-lyr_OberaemterWuerttemberg_13.set('fieldLabels', {'Territor_1': 'inline label - visible with data', 'Oberamt': 'inline label - visible with data', 'Stichjahr': 'inline label - visible with data', 'Archivlink': 'header label - visible with data', 'Archivlink1': 'header label - visible with data', 'Archivlink2': 'header label - visible with data', 'Archivlink3': 'header label - visible with data', 'Archivlink4': 'header label - visible with data', 'Archivlink5': 'header label - visible with data', });
-lyr_OberaemterWuerttemberg_13.on('precompose', function(evt) {
+lyr_BezirksmterBaden_13.set('fieldLabels', {'Territor_1': 'inline label - visible with data', 'Oberamt': 'inline label - visible with data', 'Stichjahr': 'inline label - visible with data', 'Archivlink': 'header label - visible with data', 'Archivlink1': 'header label - visible with data', 'Archivlink2': 'header label - visible with data', 'Archivlink3': 'header label - visible with data', 'Archivlink4': 'header label - visible with data', 'Archivlink5': 'header label - visible with data', });
+lyr_ObermterWrttemberg_14.set('fieldLabels', {'Territor_1': 'inline label - visible with data', 'Oberamt': 'inline label - visible with data', 'Stichjahr': 'inline label - visible with data', 'Archivlink': 'header label - visible with data', 'Archivlink1': 'header label - visible with data', 'Archivlink2': 'header label - visible with data', 'Archivlink3': 'header label - visible with data', 'Archivlink4': 'header label - visible with data', 'Archivlink5': 'header label - visible with data', });
+lyr_ObermterWrttemberg_14.on('precompose', function(evt) {
     evt.context.globalCompositeOperation = 'normal';
 });
