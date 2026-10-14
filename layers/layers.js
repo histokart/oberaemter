@@ -1,5 +1,5 @@
 ol.proj.proj4.register(proj4);
-//ol.proj.get("EPSG:3857").setExtent([495131.995798, 5926866.529558, 1551824.912465, 6639706.946225]);
+//ol.proj.get("EPSG:3857").setExtent([491864.391631, 5925861.112891, 1548557.308298, 6638701.529558]);
 var wms_layers = [];
 
 
@@ -225,7 +225,7 @@ var lyr_ObermterWrttemberg_14 = new ol.layer.Vector({
             });
 var group_ObermterHohenzollern = new ol.layer.Group({
                                 layers: [lyr_ObermterHohenzollern1925_1,lyr_ObermterHohenzollern1862_2,lyr_ObermterHohenzollern1861_3,lyr_ObermterHohenzollern1854_4,lyr_ObermterHohenzollern1840_5,lyr_ObermterHohenzollern1838_6,lyr_ObermterHohenzollern1830_7,lyr_ObermterHohenzollern1828_8,lyr_ObermterHohenzollern1827_9,lyr_ObermterHohenzollern1823_10,lyr_ObermterHohenzollern1822_11,lyr_ObermterHohenzollern1814_12,],
-                                fold: 'open',
+                                fold: 'close',
                                 title: 'Oberämter Hohenzollern'});
 
 lyr_OpenStreetMap_0.setVisible(true);lyr_ObermterHohenzollern1925_1.setVisible(true);lyr_ObermterHohenzollern1862_2.setVisible(false);lyr_ObermterHohenzollern1861_3.setVisible(false);lyr_ObermterHohenzollern1854_4.setVisible(false);lyr_ObermterHohenzollern1840_5.setVisible(false);lyr_ObermterHohenzollern1838_6.setVisible(false);lyr_ObermterHohenzollern1830_7.setVisible(false);lyr_ObermterHohenzollern1828_8.setVisible(false);lyr_ObermterHohenzollern1827_9.setVisible(false);lyr_ObermterHohenzollern1823_10.setVisible(false);lyr_ObermterHohenzollern1822_11.setVisible(false);lyr_ObermterHohenzollern1814_12.setVisible(true);lyr_BezirksmterBaden_13.setVisible(true);lyr_ObermterWrttemberg_14.setVisible(true);
