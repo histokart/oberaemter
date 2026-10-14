@@ -7,7 +7,7 @@ var map = new ol.Map({
         constrainResolution: false,
         maxZoom: 18,
         minZoom: 1,
-        extent: [538623.555815, 5922477.728379, 1562137.722482, 6701675.645046],
+        extent: [495131.995798, 5926866.529558, 1551824.912465, 6639706.946225],
         projection: new ol.proj.Projection({
             code: 'EPSG:3857',
             //extent: [829206.555269, 6029058.632475, 1171383.842084, 6410522.383752],
@@ -17,7 +17,7 @@ var map = new ol.Map({
 });
 
 //initial view - epsg:3857 coordinates if not "Match project CRS"
-map.getView().fit([538623.555815, 5922477.728379, 1562137.722482, 6701675.645046], map.getSize());
+map.getView().fit([495131.995798, 5926866.529558, 1551824.912465, 6639706.946225], map.getSize());
 
 //change cursor
 function pointerOnFeature(evt) {
@@ -523,7 +523,7 @@ var Abstract = new ol.control.Control({
 
         var linkElement = document.createElement('a');
 
-        if (1224 > 240) {
+        if (1318 > 240) {
             linkElement.setAttribute("onmouseenter", "showAbstract()");
             linkElement.setAttribute("onmouseleave", "hideAbstract()");
             linkElement.innerHTML = 'i';
@@ -537,13 +537,13 @@ var Abstract = new ol.control.Control({
             window.showAbstract = function() {
                 linkElement.classList.remove("project-abstract");
                 linkElement.classList.add("project-abstract-uncollapsed");
-                linkElement.innerHTML = 'Vektorlayer mit den Amtsgrenzen der badischen, hohenzollerischen und württembergischen Bezirks- bzw. Oberämter zu den Stichjahren 1924, 1925 bzw. 1926. Beim Klick auf einen Amtsbezirk werden Verknüpfungen zu den Findmitteln der häufig nachgefragten, einschlägigen Archivaliengruppen im Landesarchiv Baden-Württemberg angeboten.<br /><br />Über das Lupensymbol können Orte über die Hintergrundkarte von OpenStreetMap gesucht und angesteuert werden. Sofern der Ort innerhalb eines der Amtsbezirke liegt, öffnet ein Klick auf das Standort-Symbol das Popup-Fenster mit den Links zu den archivischen Findmitteln.<br /><br />Die Vektorlayer der hohenzollerischen bzw. preußischen Ämter/Oberämter decken über die Stichjahre hinaus den Zeitraum von 1806 bis 1925 ab. Die einzelnen Layer zeigen die Anpassungen der Grenzen der hohenzollerischen Ämter/Oberämter im Zeitraum von ca. 1806 bis 1925, dem Jahr, als in Hohenzollern nach dem Vorbild der übrigen preußischen Provinzen die bis dahin noch verbliebenen vier Oberämter zu zwei Landkreisen zusammengefasst wurden (Landkreise Hechingen und Sigmaringen). Als Zeitschnitte dienen die jeweiligen Veränderungen in den räumlichen Zuschnitten bzw. administrativen Zuordnungen der Ämter. <br /><br />Franz-Josef Ziwes';
+                linkElement.innerHTML = 'Vektorlayer mit den Amtsgrenzen der badischen, hohenzollerischen und württembergischen Bezirks- bzw. Oberämter zu den Stichjahren 1924, 1925 bzw. 1926. Beim Klick auf einen Amtsbezirk werden Verknüpfungen zu den Findmitteln der häufig nachgefragten, einschlägigen Archivaliengruppen im Landesarchiv Baden-Württemberg angeboten. Die einzelnen Layer können über den blauen Schalter oben rechts ein- und ausgeblendet werden.<br /><br />Über das Lupensymbol können Orte über die Hintergrundkarte von OpenStreetMap gesucht und angesteuert werden. Sofern der Ort innerhalb eines der Amtsbezirke liegt, öffnet ein Klick auf das Standort-Symbol das Popup-Fenster mit den Links zu den archivischen Findmitteln.<br /><br />Die Vektorlayer der hohenzollerischen bzw. preußischen Ämter/Oberämter decken über die Stichjahre hinaus den Zeitraum von 1806 bis 1925 ab. Die einzelnen Layer zeigen die Anpassungen der Grenzen der hohenzollerischen Ämter/Oberämter im Zeitraum von ca. 1806 bis 1925, dem Jahr, als in Hohenzollern nach dem Vorbild der übrigen preußischen Provinzen die bis dahin noch verbliebenen vier Oberämter zu zwei Landkreisen zusammengefasst wurden (Landkreise Hechingen und Sigmaringen). Als Zeitschnitte dienen die jeweiligen Veränderungen in den räumlichen Zuschnitten bzw. administrativen Zuordnungen der Ämter. <br /><br />Franz-Josef Ziwes';
             }
 
             hideAbstract();
         } else {
             linkElement.classList.add("project-abstract-uncollapsed");
-            linkElement.innerHTML = 'Vektorlayer mit den Amtsgrenzen der badischen, hohenzollerischen und württembergischen Bezirks- bzw. Oberämter zu den Stichjahren 1924, 1925 bzw. 1926. Beim Klick auf einen Amtsbezirk werden Verknüpfungen zu den Findmitteln der häufig nachgefragten, einschlägigen Archivaliengruppen im Landesarchiv Baden-Württemberg angeboten.<br /><br />Über das Lupensymbol können Orte über die Hintergrundkarte von OpenStreetMap gesucht und angesteuert werden. Sofern der Ort innerhalb eines der Amtsbezirke liegt, öffnet ein Klick auf das Standort-Symbol das Popup-Fenster mit den Links zu den archivischen Findmitteln.<br /><br />Die Vektorlayer der hohenzollerischen bzw. preußischen Ämter/Oberämter decken über die Stichjahre hinaus den Zeitraum von 1806 bis 1925 ab. Die einzelnen Layer zeigen die Anpassungen der Grenzen der hohenzollerischen Ämter/Oberämter im Zeitraum von ca. 1806 bis 1925, dem Jahr, als in Hohenzollern nach dem Vorbild der übrigen preußischen Provinzen die bis dahin noch verbliebenen vier Oberämter zu zwei Landkreisen zusammengefasst wurden (Landkreise Hechingen und Sigmaringen). Als Zeitschnitte dienen die jeweiligen Veränderungen in den räumlichen Zuschnitten bzw. administrativen Zuordnungen der Ämter. <br /><br />Franz-Josef Ziwes';
+            linkElement.innerHTML = 'Vektorlayer mit den Amtsgrenzen der badischen, hohenzollerischen und württembergischen Bezirks- bzw. Oberämter zu den Stichjahren 1924, 1925 bzw. 1926. Beim Klick auf einen Amtsbezirk werden Verknüpfungen zu den Findmitteln der häufig nachgefragten, einschlägigen Archivaliengruppen im Landesarchiv Baden-Württemberg angeboten. Die einzelnen Layer können über den blauen Schalter oben rechts ein- und ausgeblendet werden.<br /><br />Über das Lupensymbol können Orte über die Hintergrundkarte von OpenStreetMap gesucht und angesteuert werden. Sofern der Ort innerhalb eines der Amtsbezirke liegt, öffnet ein Klick auf das Standort-Symbol das Popup-Fenster mit den Links zu den archivischen Findmitteln.<br /><br />Die Vektorlayer der hohenzollerischen bzw. preußischen Ämter/Oberämter decken über die Stichjahre hinaus den Zeitraum von 1806 bis 1925 ab. Die einzelnen Layer zeigen die Anpassungen der Grenzen der hohenzollerischen Ämter/Oberämter im Zeitraum von ca. 1806 bis 1925, dem Jahr, als in Hohenzollern nach dem Vorbild der übrigen preußischen Provinzen die bis dahin noch verbliebenen vier Oberämter zu zwei Landkreisen zusammengefasst wurden (Landkreise Hechingen und Sigmaringen). Als Zeitschnitte dienen die jeweiligen Veränderungen in den räumlichen Zuschnitten bzw. administrativen Zuordnungen der Ämter. <br /><br />Franz-Josef Ziwes';
         }
 
         titleElement.appendChild(linkElement);
